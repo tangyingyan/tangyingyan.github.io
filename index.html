@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>唐英燕 · 个人简历</title>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
     <style>
         /* ========== 全局重置 & 基础 ========== */
         * {
@@ -677,33 +674,6 @@
             object-fit: cover;
         }
 
-        .work-image .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(201, 169, 110, 0.25);
-            backdrop-filter: blur(4px);
-            border: 2px solid rgba(201, 169, 110, 0.5);
-            color: #fff;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(201, 169, 110, 0.1);
-        }
-
-        .work-image .play-btn:hover {
-            background: rgba(201, 169, 110, 0.4);
-            transform: translate(-50%, -50%) scale(1.08);
-        }
-
         .work-content {
             padding: 18px 20px 22px;
         }
@@ -983,37 +953,30 @@
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ==================== 语言切换 ==================== -->
+    <!-- ===== 语言切换 ===== -->
     <div class="lang-switch">
         <button id="langZh" class="active" data-lang="zh">中文</button>
         <button id="langEn" data-lang="en">EN</button>
     </div>
 
-    <!-- ==================== 首屏 HERO ==================== -->
+    <!-- ===== 首屏 HERO ===== -->
     <section class="hero" id="top">
         <div class="hero-bg">
-            <!-- Hero Banner 视频改为herobanner.mp4 -->
             <video src="herobanner.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;"></video>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-glow"></div>
-
         <div class="hero-content">
-            <div class="hero-name">
-                YINGYAN <span class="gold">TANG</span>
-            </div>
-            <div class="hero-sub" id="typewriter">
-                <span id="typed-text"></span><span class="cursor"></span>
-            </div>
+            <div class="hero-name">YINGYAN <span class="gold">TANG</span></div>
+            <div class="hero-sub" id="typewriter"><span id="typed-text"></span><span class="cursor"></span></div>
             <div class="hero-line"></div>
         </div>
         <div class="hero-scroll-hint" data-key="scrollHint">✦ 向下探索 ✦</div>
     </section>
 
-    <!-- ==================== 个人简介 ==================== -->
+    <!-- ===== 个人简介 ===== -->
     <section id="about">
         <div class="container">
             <div class="animate-section" id="aboutSection">
@@ -1025,26 +988,15 @@
                     <div class="about-grid">
                         <div class="avatar-col">
                             <div class="avatar">
-                                <!-- 头像保持 avatar.jpg -->
                                 <img src="images/avatar.jpg" alt="唐英燕头像" loading="lazy" />
                             </div>
                             <span class="avatar-label" data-key="avatarLabel">✦ 个人品牌</span>
                         </div>
-
                         <div class="about-text">
-                            <p data-key="aboutText1">
-                                熟练运用各类主流 AI 软件，独立完成视频剪辑与多平台账号运营
-                                （<strong>家具类 · 切片类 · AI图文视频</strong>）。
-                            </p>
-                            <p style="margin-top:12px;" data-key="aboutText2">
-                                拥有多年集团培训与实战运营经验，善于从 0 到 1 组建团队、推动项目落地，
-                                抗压能力强，对新事物保持高度热情。
-                            </p>
-                            <div class="gold-border" style="margin-top:20px; color:var(--white-muted); font-size:0.9rem;" data-key="aboutQuote">
-                                「 自主学习 · 善于沟通 · 拥抱变化 」
-                            </div>
+                            <p data-key="aboutText1">熟练运用各类主流 AI 软件，独立完成视频剪辑与多平台账号运营（<strong>家具类 · 切片类 · AI图文视频</strong>）。</p>
+                            <p style="margin-top:12px;" data-key="aboutText2">拥有多年集团培训与实战运营经验，善于从 0 到 1 组建团队、推动项目落地，抗压能力强，对新事物保持高度热情。</p>
+                            <div class="gold-border" style="margin-top:20px; color:var(--white-muted); font-size:0.9rem;" data-key="aboutQuote">「 自主学习 · 善于沟通 · 拥抱变化 」</div>
                         </div>
-
                         <div class="about-meta">
                             <div class="about-meta-item"><span class="label" data-key="labelName">姓名</span> <span data-key="metaName">唐英燕</span></div>
                             <div class="about-meta-item"><span class="label" data-key="labelBirth">出生</span> <span data-key="metaBirth">1987.06</span> <span style="color:var(--white-muted);font-size:0.7rem;opacity:0.6;" data-key="metaBirthNote">(实际90后)</span></div>
@@ -1059,7 +1011,7 @@
         </div>
     </section>
 
-    <!-- ==================== 核心技能 ==================== -->
+    <!-- ===== 核心技能 ===== -->
     <section id="skills">
         <div class="container">
             <div class="animate-section" id="skillsSection">
@@ -1068,72 +1020,18 @@
                     <h2 class="section-title"><span data-key="skillsTitle">核心</span> <span class="gold" data-key="skillsTitleGold">技能</span></h2>
                 </div>
                 <div class="skills-grid">
-                    <!-- 技能 1：AI图文运营 -> work1.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work1.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">🤖</span>
-                            <h4 data-key="skill1_title">AI 图文运营</h4>
-                            <p data-key="skill1_desc">多平台内容策划与矩阵发布，累计输出上千条作品</p>
-                        </div>
-                    </div>
-                    <!-- 技能 2：视频剪辑 -> work2.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work2.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">🎬</span>
-                            <h4 data-key="skill2_title">视频剪辑</h4>
-                            <p data-key="skill2_desc">影视切片、技能科普类内容制作，单条播放 100w+</p>
-                        </div>
-                    </div>
-                    <!-- 技能 3：培训体系 -> work3.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work3.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">🏛️</span>
-                            <h4 data-key="skill3_title">培训体系</h4>
-                            <p data-key="skill3_desc">创办经销商商学院，系统开发课程与赋能落地</p>
-                        </div>
-                    </div>
-                    <!-- 技能 4：项目管理 -> work4.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work4.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">📊</span>
-                            <h4 data-key="skill4_title">项目管理</h4>
-                            <p data-key="skill4_desc">从 0 到 1 组建团队，推动多业务线落地与增长</p>
-                        </div>
-                    </div>
-                    <!-- 技能 5：新媒体运营 -> work5.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work5.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">📱</span>
-                            <h4 data-key="skill5_title">新媒体运营</h4>
-                            <p data-key="skill5_desc">矩阵账号搭建、内容策划、粉丝增长与变现探索</p>
-                        </div>
-                    </div>
-                    <!-- 技能 6：AI工作场景应用 -> work6.png -->
-                    <div class="skill-card animate-item">
-                        <img src="images/work6.png" alt="skill" loading="lazy" />
-                        <div class="skill-overlay"></div>
-                        <div class="skill-content">
-                            <span class="skill-icon">⚡</span>
-                            <h4 data-key="skill6_title">AI 工作场景应用</h4>
-                            <p data-key="skill6_desc">快速搭建实际应用场景，赋能业务提效</p>
-                        </div>
-                    </div>
+                    <div class="skill-card animate-item"><img src="images/work1.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">🤖</span><h4 data-key="skill1_title">AI 图文运营</h4><p data-key="skill1_desc">多平台内容策划与矩阵发布，累计输出上千条作品</p></div></div>
+                    <div class="skill-card animate-item"><img src="images/work2.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">🎬</span><h4 data-key="skill2_title">视频剪辑</h4><p data-key="skill2_desc">影视切片、技能科普类内容制作，单条播放 100w+</p></div></div>
+                    <div class="skill-card animate-item"><img src="images/work3.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">🏛️</span><h4 data-key="skill3_title">培训体系</h4><p data-key="skill3_desc">创办经销商商学院，系统开发课程与赋能落地</p></div></div>
+                    <div class="skill-card animate-item"><img src="images/work4.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">📊</span><h4 data-key="skill4_title">项目管理</h4><p data-key="skill4_desc">从 0 到 1 组建团队，推动多业务线落地与增长</p></div></div>
+                    <div class="skill-card animate-item"><img src="images/work5.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">📱</span><h4 data-key="skill5_title">新媒体运营</h4><p data-key="skill5_desc">矩阵账号搭建、内容策划、粉丝增长与变现探索</p></div></div>
+                    <div class="skill-card animate-item"><img src="images/work6.png" alt="skill" loading="lazy" /><div class="skill-overlay"></div><div class="skill-content"><span class="skill-icon">⚡</span><h4 data-key="skill6_title">AI 工作场景应用</h4><p data-key="skill6_desc">快速搭建实际应用场景，赋能业务提效</p></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 作品展示 ==================== -->
+    <!-- ===== 作品展示 ===== -->
     <section id="works">
         <div class="container">
             <div class="animate-section" id="worksSection">
@@ -1142,7 +1040,7 @@
                     <h2 class="section-title"><span data-key="worksTitle">代表</span> <span class="gold" data-key="worksTitleGold">作品</span></h2>
                 </div>
                 <div class="works-grid">
-                    <!-- 作品 1：视频 video1.mp4 -->
+                    <!-- 作品 1：video1 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
                             <video src="videos/video1.mp4" poster="videos/video1.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
@@ -1153,8 +1051,7 @@
                             <span class="work-tag" data-key="work1_tag">内容策划 · 矩阵运营</span>
                         </div>
                     </div>
-
-                    <!-- 作品 2：视频 video2.mp4 -->
+                    <!-- 作品 2：video2 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
                             <video src="videos/video2.mp4" poster="videos/video2.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
@@ -1165,8 +1062,7 @@
                             <span class="work-tag" data-key="work2_tag">视频剪辑 · 爆款打造</span>
                         </div>
                     </div>
-
-                    <!-- 作品 3：视频 video3.mp4 -->
+                    <!-- 作品 3：video3 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
                             <video src="videos/video3.mp4" poster="videos/video3.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
@@ -1177,8 +1073,7 @@
                             <span class="work-tag" data-key="work3_tag">培训体系 · 课程开发</span>
                         </div>
                     </div>
-
-                    <!-- 作品 4：图片 dbz4.png -->
+                    <!-- 作品 4：图片 -->
                     <div class="work-card animate-item">
                         <div class="work-image">
                             <img src="images/dbz4.png" alt="work" loading="lazy" />
@@ -1189,8 +1084,7 @@
                             <span class="work-tag" data-key="work4_tag">场景落地 · 效率赋能</span>
                         </div>
                     </div>
-
-                    <!-- 作品 5：视频 video5.mp4 -->
+                    <!-- 作品 5：video5 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
                             <video src="videos/video5.mp4" poster="videos/video5.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
@@ -1201,8 +1095,7 @@
                             <span class="work-tag" data-key="work5_tag">项目统筹 · 落地执行</span>
                         </div>
                     </div>
-
-                    <!-- 作品 6：视频 video6.mp4 -->
+                    <!-- 作品 6：video6 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
                             <video src="videos/video6.mp4" poster="videos/video6.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
@@ -1218,7 +1111,7 @@
         </div>
     </section>
 
-    <!-- ==================== 经历时间轴 ==================== -->
+    <!-- ===== 经历时间轴 ===== -->
     <section id="timeline">
         <div class="container">
             <div class="animate-section" id="timelineSection">
@@ -1227,48 +1120,17 @@
                     <h2 class="section-title"><span data-key="timelineTitle">经历</span> <span class="gold" data-key="timelineTitleGold">时间轴</span></h2>
                 </div>
                 <div class="timeline">
-                    <!-- 条目 1 -->
-                    <div class="timeline-item animate-item">
-                        <div class="date" data-key="tl1_date">2022 — 至今</div>
-                        <h4 data-key="tl1_title">自媒体运营 · 个人创作者</h4>
-                        <div class="sub" data-key="tl1_sub">AI图文 / 影视宣发 / 技能科普</div>
-                        <p data-key="tl1_desc">自行经营矩阵账号，涵盖内容策划、视频剪辑、文案撰写及日常发布全流程，累计发布上千条作品，单条播放突破 100 万+。</p>
-                    </div>
-                    <!-- 条目 2 -->
-                    <div class="timeline-item animate-item">
-                        <div class="date" data-key="tl2_date">2016.05 — 2022.01</div>
-                        <h4 data-key="tl2_title">营销支持部负责人</h4>
-                        <div class="sub" data-key="tl2_sub">东莞市耀邦集团有限公司</div>
-                        <p data-key="tl2_desc">统筹部门工作，搭建标准化运营流程，支持全国 1000+ 经销商。创办「全国经销商商学院」，兼任培训总监；主导直播业务及推进企业对外所有创新性合作的落地实施。</p>
-                    </div>
-                    <!-- 条目 3 -->
-                    <div class="timeline-item animate-item">
-                        <div class="date" data-key="tl3_date">2014.02 — 2016.06</div>
-                        <h4 data-key="tl3_title">店面经理 · 总部直营项目负责人</h4>
-                        <div class="sub" data-key="tl3_sub">亚博国际家居</div>
-                        <p data-key="tl3_desc">负责全国经销商店面活动培训与内容策划，后破格留任总部直营部，主导直营体系规划及全国拎包入住项目统筹推进。</p>
-                    </div>
-                    <!-- 条目 4 -->
-                    <div class="timeline-item animate-item">
-                        <div class="date" data-key="tl4_date">2013.06 — 2014.01</div>
-                        <h4 data-key="tl4_title">直营店店面经理</h4>
-                        <div class="sub" data-key="tl4_sub">东莞市艺林家具有限公司（欧木轩）</div>
-                        <p data-key="tl4_desc">负责总部直营店日常运营，统筹销售、人员、陈列与客户服务，带领团队实现业绩突围；主导每年两届家具展经销商接待工作。</p>
-                    </div>
-                    <!-- 教育 -->
-                    <div class="timeline-item animate-item" style="margin-top:8px;">
-                        <div class="date" data-key="tl5_date">🎓 教育</div>
-                        <h4 data-key="tl5_title1">行政管理 · 本科</h4>
-                        <div class="sub" data-key="tl5_sub1">湖南师范大学 ｜ 2021.06 – 2024.06</div>
-                        <h4 style="margin-top:6px;" data-key="tl5_title2">报关与国际货运 · 大专</h4>
-                        <div class="sub" data-key="tl5_sub2">成都市纺织专科学院 ｜ 2010.09 – 2013.06</div>
-                    </div>
+                    <div class="timeline-item animate-item"><div class="date" data-key="tl1_date">2022 — 至今</div><h4 data-key="tl1_title">自媒体运营 · 个人创作者</h4><div class="sub" data-key="tl1_sub">AI图文 / 影视宣发 / 技能科普</div><p data-key="tl1_desc">自行经营矩阵账号，涵盖内容策划、视频剪辑、文案撰写及日常发布全流程，累计发布上千条作品，单条播放突破 100 万+。</p></div>
+                    <div class="timeline-item animate-item"><div class="date" data-key="tl2_date">2016.05 — 2022.01</div><h4 data-key="tl2_title">营销支持部负责人</h4><div class="sub" data-key="tl2_sub">东莞市耀邦集团有限公司</div><p data-key="tl2_desc">统筹部门工作，搭建标准化运营流程，支持全国 1000+ 经销商。创办「全国经销商商学院」，兼任培训总监；主导直播业务及推进企业对外所有创新性合作的落地实施。</p></div>
+                    <div class="timeline-item animate-item"><div class="date" data-key="tl3_date">2014.02 — 2016.06</div><h4 data-key="tl3_title">店面经理 · 总部直营项目负责人</h4><div class="sub" data-key="tl3_sub">亚博国际家居</div><p data-key="tl3_desc">负责全国经销商店面活动培训与内容策划，后破格留任总部直营部，主导直营体系规划及全国拎包入住项目统筹推进。</p></div>
+                    <div class="timeline-item animate-item"><div class="date" data-key="tl4_date">2013.06 — 2014.01</div><h4 data-key="tl4_title">直营店店面经理</h4><div class="sub" data-key="tl4_sub">东莞市艺林家具有限公司（欧木轩）</div><p data-key="tl4_desc">负责总部直营店日常运营，统筹销售、人员、陈列与客户服务，带领团队实现业绩突围；主导每年两届家具展经销商接待工作。</p></div>
+                    <div class="timeline-item animate-item" style="margin-top:8px;"><div class="date" data-key="tl5_date">🎓 教育</div><h4 data-key="tl5_title1">行政管理 · 本科</h4><div class="sub" data-key="tl5_sub1">湖南师范大学 ｜ 2021.06 – 2024.06</div><h4 style="margin-top:6px;" data-key="tl5_title2">报关与国际货运 · 大专</h4><div class="sub" data-key="tl5_sub2">成都市纺织专科学院 ｜ 2010.09 – 2013.06</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 底部 ==================== -->
+    <!-- ===== 底部 ===== -->
     <footer class="footer" id="contact">
         <div class="footer-links">
             <a href="#top" data-key="footerHome">首页</a>
@@ -1281,11 +1143,8 @@
         <div class="footer-copy" data-key="footerCopy">© 2026 唐英燕 · 深色电影质感 · 香槟金</div>
     </footer>
 
-    <!-- ==================== JavaScript ==================== -->
     <script>
         (function() {
-
-            // ========== 语言包 ==========
             const langData = {
                 zh: {
                     scrollHint: '✦ 向下探索 ✦',
@@ -1467,14 +1326,11 @@
                 }
             };
 
-            // ========== 当前语言 ==========
             let currentLang = 'zh';
 
-            // ========== 更新页面文本 ==========
             function updateLanguage(lang) {
                 const data = langData[lang];
                 if (!data) return;
-
                 document.querySelectorAll('[data-key]').forEach(el => {
                     const key = el.getAttribute('data-key');
                     if (data[key] !== undefined) {
@@ -1485,23 +1341,17 @@
                         }
                     }
                 });
-
                 document.querySelectorAll('.section-title span[data-key]').forEach(el => {
                     const key = el.getAttribute('data-key');
-                    if (data[key] !== undefined) {
-                        el.textContent = data[key];
-                    }
+                    if (data[key] !== undefined) el.textContent = data[key];
                 });
-
                 document.querySelectorAll('.lang-switch button').forEach(btn => {
                     btn.classList.toggle('active', btn.dataset.lang === lang);
                 });
-
                 currentLang = lang;
                 restartTypewriter(lang);
             }
 
-            // ========== 打字机效果 ==========
             let typeTimer = null;
             let charIndex = 0;
             let typedText = '';
@@ -1523,10 +1373,8 @@
             }
 
             function restartTypewriter(lang) {
-                if (typeTimer) {
-                    clearTimeout(typeTimer);
-                    typeTimer = null;
-                }
+                if (typeTimer) { clearTimeout(typeTimer);
+                    typeTimer = null; }
                 charIndex = 0;
                 typedText = getTypeText(lang);
                 typedEl.textContent = '';
@@ -1534,23 +1382,14 @@
                 setTimeout(typeNext, 400);
             }
 
-            // ========== 语言切换事件 ==========
-            document.getElementById('langZh').addEventListener('click', function() {
-                if (currentLang === 'zh') return;
-                updateLanguage('zh');
-            });
+            document.getElementById('langZh').addEventListener('click', function() { if (currentLang === 'zh') return;
+                updateLanguage('zh'); });
+            document.getElementById('langEn').addEventListener('click', function() { if (currentLang === 'en') return;
+                updateLanguage('en'); });
 
-            document.getElementById('langEn').addEventListener('click', function() {
-                if (currentLang === 'en') return;
-                updateLanguage('en');
-            });
-
-            // ========== 初始化 ==========
             updateLanguage('zh');
 
-            // ========== 滚动动效 ==========
             const sections = document.querySelectorAll('.animate-section');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1558,15 +1397,8 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                threshold: 0.2,
-                rootMargin: '0px 0px -30px 0px'
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
+            }, { threshold: 0.2, rootMargin: '0px 0px -30px 0px' });
+            sections.forEach(section => observer.observe(section));
             setTimeout(() => {
                 sections.forEach(section => {
                     const rect = section.getBoundingClientRect();
@@ -1578,19 +1410,15 @@
                 });
             }, 300);
 
-            // ========== 平滑锚点滚动 ==========
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
                     const target = document.querySelector(targetId);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             });
-
         })();
     </script>
 </body>
