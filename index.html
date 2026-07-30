@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>唐英燕 · 个人简历</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -658,13 +659,14 @@
             transform: scale(1.06);
         }
 
-        /* 视频容器 */
+        /* 视频容器（保留用于B站iframe） */
         .work-image.video-container {
             padding-top: 60%;
             position: relative;
             background: #0A0A0A;
         }
 
+        .work-image.video-container iframe,
         .work-image.video-container video {
             position: absolute;
             top: 0;
@@ -1040,10 +1042,10 @@
                     <h2 class="section-title"><span data-key="worksTitle">代表</span> <span class="gold" data-key="worksTitleGold">作品</span></h2>
                 </div>
                 <div class="works-grid">
-                    <!-- 作品 1：video1 -->
+                    <!-- 作品 1：B站嵌入 video1 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <video src="videos/video1.mp4" poster="videos/video1.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV1tJ3t6WEpe&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work1_title">AI 图文短视频矩阵运营</h3>
@@ -1051,10 +1053,11 @@
                             <span class="work-tag" data-key="work1_tag">内容策划 · 矩阵运营</span>
                         </div>
                     </div>
-                    <!-- 作品 2：video2 -->
+
+                    <!-- 作品 2：B站嵌入 video2 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <video src="videos/video2.mp4" poster="videos/video2.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV11W3t6SEmL&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work2_title">大博主卖货切片爆款内容</h3>
@@ -1062,10 +1065,11 @@
                             <span class="work-tag" data-key="work2_tag">视频剪辑 · 爆款打造</span>
                         </div>
                     </div>
-                    <!-- 作品 3：video3 -->
+
+                    <!-- 作品 3：B站嵌入 video3 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <video src="videos/video3.mp4" poster="videos/video3.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV1KW3t6DEpX&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work3_title">全国经销商商学院</h3>
@@ -1073,7 +1077,8 @@
                             <span class="work-tag" data-key="work3_tag">培训体系 · 课程开发</span>
                         </div>
                     </div>
-                    <!-- 作品 4：图片 -->
+
+                    <!-- 作品 4：图片（保持不变） -->
                     <div class="work-card animate-item">
                         <div class="work-image">
                             <img src="images/dbz4.png" alt="work" loading="lazy" />
@@ -1084,10 +1089,11 @@
                             <span class="work-tag" data-key="work4_tag">场景落地 · 效率赋能</span>
                         </div>
                     </div>
-                    <!-- 作品 5：video5 -->
+
+                    <!-- 作品 5：B站嵌入 video5 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <video src="videos/video5.mp4" poster="videos/video5.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV1Kp3t6HEhx&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work5_title">全国拎包入住项目</h3>
@@ -1095,10 +1101,11 @@
                             <span class="work-tag" data-key="work5_tag">项目统筹 · 落地执行</span>
                         </div>
                     </div>
-                    <!-- 作品 6：video6 -->
+
+                    <!-- 作品 6：B站嵌入 video6 -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <video src="videos/video6.mp4" poster="videos/video6.mp4-封面.jpg" controls preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV1mp3t6HE78&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work6_title">技能科普矩阵账号</h3>
