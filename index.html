@@ -659,7 +659,6 @@
             transform: scale(1.06);
         }
 
-        /* 视频容器（保留用于B站iframe） */
         .work-image.video-container {
             padding-top: 60%;
             position: relative;
@@ -674,6 +673,53 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* 封面图 + 播放按钮样式 */
+        .video-cover-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-cover-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .video-cover-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .video-cover-wrapper .play-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(201, 169, 110, 0.75);
+            color: #fff;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease, background 0.3s ease;
+            pointer-events: none;
+        }
+
+        .video-cover-wrapper:hover .play-icon {
+            transform: scale(1.1);
+            background: rgba(201, 169, 110, 0.9);
         }
 
         .work-content {
@@ -1042,10 +1088,14 @@
                     <h2 class="section-title"><span data-key="worksTitle">代表</span> <span class="gold" data-key="worksTitleGold">作品</span></h2>
                 </div>
                 <div class="works-grid">
-                    <!-- 作品 1：B站嵌入 video1 -->
+                    <!-- 作品 1：B站嵌入 video1（点击封面加载） -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <iframe src="//player.bilibili.com/player.html?bvid=BV1tJ3t6WEpe&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <div class="video-cover-wrapper" onclick="loadBilibiliVideo(this, 'BV1tJ3t6WEpe')">
+                                <img src="videos/video1.mp4-封面.jpg" alt="video1封面" loading="lazy" />
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <iframe id="bili_iframe_1" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;display:none;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work1_title">AI 图文短视频矩阵运营</h3>
@@ -1054,10 +1104,14 @@
                         </div>
                     </div>
 
-                    <!-- 作品 2：B站嵌入 video2 -->
+                    <!-- 作品 2：B站嵌入 video2（点击封面加载） -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <iframe src="//player.bilibili.com/player.html?bvid=BV11W3t6SEmL&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <div class="video-cover-wrapper" onclick="loadBilibiliVideo(this, 'BV11W3t6SEmL')">
+                                <img src="videos/video2.mp4-封面.jpg" alt="video2封面" loading="lazy" />
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <iframe id="bili_iframe_2" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;display:none;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work2_title">大博主卖货切片爆款内容</h3>
@@ -1066,10 +1120,14 @@
                         </div>
                     </div>
 
-                    <!-- 作品 3：B站嵌入 video3 -->
+                    <!-- 作品 3：B站嵌入 video3（点击封面加载） -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <iframe src="//player.bilibili.com/player.html?bvid=BV1KW3t6DEpX&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <div class="video-cover-wrapper" onclick="loadBilibiliVideo(this, 'BV1KW3t6DEpX')">
+                                <img src="videos/video3.mp4-封面.jpg" alt="video3封面" loading="lazy" />
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <iframe id="bili_iframe_3" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;display:none;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work3_title">全国经销商商学院</h3>
@@ -1090,10 +1148,14 @@
                         </div>
                     </div>
 
-                    <!-- 作品 5：B站嵌入 video5 -->
+                    <!-- 作品 5：B站嵌入 video5（点击封面加载） -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <iframe src="//player.bilibili.com/player.html?bvid=BV1Kp3t6HEhx&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <div class="video-cover-wrapper" onclick="loadBilibiliVideo(this, 'BV1Kp3t6HEhx')">
+                                <img src="videos/video5.mp4-封面.jpg" alt="video5封面" loading="lazy" />
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <iframe id="bili_iframe_5" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;display:none;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work5_title">全国拎包入住项目</h3>
@@ -1102,10 +1164,14 @@
                         </div>
                     </div>
 
-                    <!-- 作品 6：B站嵌入 video6 -->
+                    <!-- 作品 6：B站嵌入 video6（点击封面加载） -->
                     <div class="work-card animate-item">
                         <div class="work-image video-container">
-                            <iframe src="//player.bilibili.com/player.html?bvid=BV1mp3t6HE78&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <div class="video-cover-wrapper" onclick="loadBilibiliVideo(this, 'BV1mp3t6HE78')">
+                                <img src="videos/video6.mp4-封面.jpg" alt="video6封面" loading="lazy" />
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <iframe id="bili_iframe_6" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;display:none;"></iframe>
                         </div>
                         <div class="work-content">
                             <h3 data-key="work6_title">技能科普矩阵账号</h3>
@@ -1426,6 +1492,22 @@
                     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             });
+
+            // ===== B站视频点击加载函数 =====
+            window.loadBilibiliVideo = function(wrapper, bvid) {
+                // 获取对应的 iframe（在 wrapper 的父容器里找 iframe）
+                const container = wrapper.parentElement;
+                const iframe = container.querySelector('iframe');
+                if (!iframe) return;
+
+                // 隐藏封面和播放按钮
+                wrapper.style.display = 'none';
+
+                // 显示 iframe 并加载视频
+                iframe.style.display = 'block';
+                iframe.style.zIndex = '2';
+                iframe.src = '//player.bilibili.com/player.html?bvid=' + bvid + '&page=1&muted=1';
+            };
         })();
     </script>
 </body>
